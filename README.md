@@ -1,2 +1,4 @@
-# COGS120
-project of COGS120/CSE170
+repo
+====
+
+Project Description
