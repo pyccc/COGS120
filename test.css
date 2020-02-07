@@ -8,19 +8,32 @@
     color: white;
 }
 
+/* Header for Home Page */
+#homeHeader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background-color: #DD304F;
+  color: white;
+  text-align:center;
+}
+
 h1{
     margin-top: 3%;
     margin-left: 15%;
     margin-right: 15%;
     font-size: 3rem;
-    
 }
 
 p{
     margin-top: 7%;
     margin-left: 15%;
     font-size: 2rem;
+    color:#262626;
 }
+
 
 .dot {
     height: 50px;
@@ -30,6 +43,46 @@ p{
     background-color:white;
     border-radius: 50%;
     display: inline-block;
+  }
+
+  /* Logo Placeholder */
+
+  div.circle {
+    position: absolute;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 100px;
+  }
+
+  /* General Button */
+
+  .buttons{
+    border:none;
+    font-size: 12px;
+    height: 50px;
+    width: 150px;
+    background-color: #DD304F;
+    color: white;
+    text-align: center;
+    border-radius:10%;
+    left: 48%;
+    top: 50%;
+    position: absolute;
+  }
+
+  /* Link to Quiz Text */
+
+  .linkToQuiz{
+    font-size: 10px;
+    position:absolute;
+    text-align:center;
+    margin-top: 55%;
+    margin-left: 48%;
+    color:#262626;
   }
 
   #start{
