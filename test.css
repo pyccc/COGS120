@@ -99,6 +99,33 @@ p{
     font-size: 20px;
   }
 
+  #quit{
+    border-radius:10px;
+    border: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 7%;
+    width: 20%;
+    background-color: #DD304F;
+    color: white;
+    text-align: ;
+    font-size: 15px;
+  }
+
+  #done{
+    border-radius:10px;
+    border: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 7%;
+    width: 20%;
+    background-color: #DD304F;
+    color: white;
+    text-align: ;
+    font-size: 15px;
+  }
 
   #button0{
     float: right;
@@ -268,4 +295,9 @@ p{
 }
 #button7{
     background-color: sienna;
+}
+#buttonQuit{
+  position: absolute;
+  bottom: 0;
+  align: center;
 }

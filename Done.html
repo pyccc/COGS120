@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Home</title>
+    <title>Breathe!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./public/css/bootstrap.min.css" rel="stylesheet">
@@ -20,27 +20,22 @@
 </head>
 
 <body>
-    <p style="color:black">LALALA</p>
-    <div id="homeHeader">
-        <div class="circle"></div>
+    <div id="header">
+      <span class="dot" onclick="home()"></span>
+      <script>
+          function home(){
+              //click to go to home page
+              location.href="home.html";
+          }
+      </script>
+      <h1 align="center">How was it?</h1>
     </div>
-    <div>
-    <button class="buttons" onclick="start()">
-        <div class="box" ></div>
-        Shift Your Emotions
-    </button>
-    <script>
-        function start() {
-            window.open("chooseEmo.html"); /* Link to Second Page */
-        }
-    </script>
-  </div>
-  <div>
-    <button>Settings</button>
-  </div>
-  <a href="settings.html">
-    <button id="quit">Settings</button>
-  </a>
 
+    <a href="Breathing.html">
+      <button id="quit">Try Again</button>
+    </a>
+    <a href="home.html">
+      <button id="done">Done</button>
+    </a>
 </body>
 </html>
