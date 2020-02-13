@@ -1,3 +1,23 @@
+.container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#imgLogo{
+  max-width: 95%;
+  max-height: 95%;
+  background-image: 'image.png';
+  z-index: -1;
+}
+.logoBox {
+  height: 100px;
+  width: 18%;
+  postion: fixed;
+  margin: 0 auto;
+  color: white;
+}
 #header{
     position: absolute;
     top: 0;
@@ -8,6 +28,11 @@
     color: white;
 }
 
+#loginContainer {
+   margin: 0 auto;
+   width: 150px;
+   margin-top: 300px
+}
 /* Header for Home Page */
 #homeHeader{
   position: absolute;
