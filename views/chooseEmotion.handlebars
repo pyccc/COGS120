@@ -21,7 +21,8 @@
 
 <body>
 	<script>
-		console.log(localStorage.getItem("username"));
+		localStorage.setItem("option","less");
+
 	</script>
     <div id="header">
         <span class="dot" onclick="home()"></span>
@@ -36,7 +37,7 @@
     <script>
         function home(){
             //click to go to home page
-            location.href="home.html";
+            location.href="home";
         }
         function option(event) {
             if ($('#option').is(":checked")) {
@@ -85,14 +86,20 @@
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 <footer>
     <button id="start" type="button" onclick="start()">Start</button>
     <script>
         function start() {
-            window.open("ChooseExercise.html");
+            if(localStorage.getItem("option")&&localStorage.getItem("emotion")){
+                location.href="emotionExercise";
+            }
+            else{
+                alert("Please input an emotion");
+            }
+            
         }
     </script>
 </footer>
