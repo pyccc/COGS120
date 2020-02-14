@@ -14,7 +14,7 @@
 .logoBox {
   height: 100px;
   width: 18%;
-  postion: fixed;
+  position: fixed;
   margin: 0 auto;
   color: white;
 }
@@ -64,7 +64,7 @@ p{
     height: 50px;
     width: 50px;
     margin-top: 2%;
-    margin-left: 85%;
+    margin-left: 80%;
     background-color:white;
     border-radius: 50%;
     display: inline-block;
@@ -134,7 +134,7 @@ p{
     width: 20%;
     background-color: #DD304F;
     color: white;
-    text-align: ;
+    text-align: center;
     font-size: 15px;
   }
 
@@ -148,7 +148,7 @@ p{
     width: 20%;
     background-color: #DD304F;
     color: white;
-    text-align: ;
+    text-align: center;
     font-size: 15px;
   }
 
@@ -324,5 +324,5 @@ p{
 #buttonQuit{
   position: absolute;
   bottom: 0;
-  align: center;
+  text-align: center;
 }

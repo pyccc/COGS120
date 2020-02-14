@@ -3,57 +3,98 @@
 <html>
 
 <head>
-	<title>HCI Project Portfolio</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/introHCI.css" rel="stylesheet">
-	<!-- this is a comment in HTML -->
+    <title>Choose emotion</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/chooseEmo.css" rel="stylesheet">
+    <!-- this is a comment in HTML -->
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-	<div class="container">
-		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-		<!-- p means paragraph -->
-		<div class="jumbotron">
-			<h1>Michael Bernstein</h1>
-			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
-		</div>
-		<ol>
+	<script>
+		console.log(localStorage.getItem("username"));
+	</script>
+    <div id="header">
+        <span class="dot" onclick="home()"></span>
+        <h1 align="center">What do you want to feel?</h1>
+        <p>I want to feel
+            <label id="button0" class="switch">
+                <input id="option" class="switch-input" type="checkbox" onclick="option(event)" />
+                <span class="switch-label" data-on="more" data-off="less"></span> <span class="switch-handle"></span>
+            </label>
+        </p>
+    </div>
+    <script>
+        function home(){
+            //click to go to home page
+            location.href="home.html";
+        }
+        function option(event) {
+            if ($('#option').is(":checked")) {
+                console.log("User chose more");
+                localStorage.setItem('option','more');
+            } else {
+                console.log("User chose less");
+                localStorage.setItem('option','less');
+            }
+        }
+    </script>
+    <!-- <div class="container">
+        <ol>
 			{{#each projects}}
 				<li><a href="#project{{id}}">{{name}}</a></li>
 			{{/each}}
 		</ol>
 
-		<h4>Projects</h4>
-		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
-		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
-		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		{{#each projects}}
+        <h4>Projects</h4>
+        {{#each projects}}
 			<div class="project" id="{{id}}">
 				<a href="project/{{name}}" class="thumbnail">
-					<img src="images/{{image}}" class="img">
 
 					<p>{{name}}</p>
 
 				</a>
 			</div>
 		{{/each}}
+    </div> -->
+    <script>
+        function choose(event) {
+            console.log("User chose " + event.target.name);
+            localStorage.setItem("emotion",event.target.name)
+        }
+    </script>
+    <div id='area' align="center" class="circle"
+        style="border: none; margin-top:80%; margin-left:27%; margin-right:5%;border-radius: 50%;">
+        <button id='button1' name='happy' class="emotions" onclick="choose(event)">Happy</button>
+        <button id='button2' name='sad' class="emotions" onclick="choose(event)">Sad</button>
+        <button id='button3' name='angry' class="emotions" onclick="choose(event)">Angry</button>
+        <button id='button4' name='happy1' class="emotions" onclick="choose(event)">Happy1</button>
+        <button id='button5' name='happy2' class="emotions" onclick="choose(event)">Happy2</button>
+        <button id='button6' name='happy3' class="emotions" onclick="choose(event)">Happy3</button>
+        <button id='button7' name='happy4' class="emotions" onclick="choose(event)">Happy4</button>
+    </div>
 
-		
 
-	</div>
-
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
 </body>
+
+<footer>
+    <button id="start" type="button" onclick="start()">Start</button>
+    <script>
+        function start() {
+            window.open("ChooseExercise.html");
+        }
+    </script>
+</footer>
 
 </html>
