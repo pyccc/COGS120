@@ -1,0 +1,53 @@
+#startButton{
+    border:none;
+    font-size: 12px;
+    background-color: #DD304F;
+    color: white;
+    text-align: center;
+    border-radius:10%;
+    margin-right:auto;
+    margin-left: auto;
+    top: 50%;
+    position: absolute;
+  }
+
+
+/* Container for Home Page */
+#homeBox{
+    position: absolute;
+    margin-right:auto;
+    margin-left:auto;
+    height: 40%;
+    width: 100%;
+    background-color: #DD304F;
+    color: white;
+    text-align:center;
+    font-size: 2rem;
+  }
+
+/* Header for Home Page */
+#homeHeader{
+    position: absolute;
+    margin-right: 
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    margin-top: 5%;
+    margin-left: 75%;
+    background-color:white;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+div.circle {
+    position: absolute;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 100px;
+  }
