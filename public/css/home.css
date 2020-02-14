@@ -1,34 +1,53 @@
-#startButton{
+.body{
+    padding:0;
+    margin:0;
+}
+
+#homeButtonBox{
+    position:absolute;
+    margin-right: 15%;
+    margin-left: 7%;
+    top: 50%;
+    width: 50%;
+    /*background-color:#DD304F;*/
+    text-align:center;
+}
+
+.homeButton{
     border:none;
-    font-size: 12px;
+    font-size: 15px;
     background-color: #DD304F;
     color: white;
     text-align: center;
-    border-radius:10%;
-    margin-right:auto;
-    margin-left: auto;
-    top: 50%;
+    border-radius: 5px;
     position: absolute;
   }
 
+.homep{
+    font-size:15px;
+    color:black;
+}
 
 /* Container for Home Page */
 #homeBox{
     position: absolute;
     margin-right:auto;
     margin-left:auto;
-    height: 40%;
+    height: 30%;
     width: 100%;
     background-color: #DD304F;
-    color: white;
     text-align:center;
-    font-size: 2rem;
   }
 
 /* Header for Home Page */
 #homeHeader{
     position: absolute;
-    margin-right: 
+    margin-top: 5%;
+    text-align:left;
+    left: 10%;
+    font-size: 3rem;
+    color: white;
+    line-height: 1.3;
 }
 
 .dot {
@@ -39,15 +58,14 @@
     background-color:white;
     border-radius: 50%;
     display: inline-block;
+    color:white;
 }
 
-div.circle {
+footer {
     position: absolute;
+    bottom:0;
+    height:8%;
+    width:100%;
+    background-color:#DD304F;
     display: inline-block;
-    height: 100px;
-    width: 100px;
-    background-color: white;
-    text-align: center;
-    border-radius: 50%;
-    margin-top: 100px;
-  }
+}

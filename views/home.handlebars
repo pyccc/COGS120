@@ -21,11 +21,11 @@
     <![endif]-->
 </head>
 
-<body> 
+<body class='body'> 
     
     <div id="homeBox">
         <span class="dot" onclick='home()'></span>
-        <h1>Hi, <div id="userName"></div></h1>
+        <h1 id="homeHeader">Hi, <div id="userName"></div></h1>
     </div>
     <script>
         var userName = localStorage.getItem("username");
@@ -37,16 +37,27 @@
             //click to go to home page
             location.href="home";
         }
-        
     </script>
+    <div id='homeButtonBox'>
+      <a href='chooseEmotion'>
+        <button class='homeButton'>
+        Shift Your Emotions
+        </button>
+      </a>
+    </div>
 </body>
 
 <footer>
-    <button id="start" type="button" onclick="start()">Start</button>
+    <p style='color:white;margin-top:5%;margin-left:10%;font-size:15px'
+    onclick='goSetting()'>
+      Settings</p>
+    <p style='color:white;margin-top:5%;margin-right:10%;font-size:15px'
+    onclick='goProfile()'>
+      Profile</p>
     <script>
-        function start() {
-            window.open("chooseemotion.handlebars");
-        }
+      function goSetting(){
+        location.href='settings';
+      }
     </script>
 </footer>
 
