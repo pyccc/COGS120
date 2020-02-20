@@ -1,0 +1,14 @@
+More Happy: <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5YTAi6JhwZm" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+More Sad: <iframe src="https://open.spotify.com/embed/playlist/6VlSyuiXNlCkLUCumyBr2k" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+More Angry: <iframe src="https://open.spotify.com/embed/playlist/5rljoTLvZSDYksXY4HsBTc" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+More Fear: <iframe src="https://open.spotify.com/embed/playlist/2xWQWBGr1YqDeZoXtGsp1i" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+More Disgust: <iframe src="https://open.spotify.com/embed/album/1CeB19makViWJHMXKbMP5b" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+More Surprise: <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8GBmCO89g8U" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+Neutral: <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4PP3DA4J0N8" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+Less Happy:     USE Neutral
+Less Sad:       USE More Happy
+Less Angry:     <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXaImRpG7HXqp" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+Less Fear:      <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXzR2GKEiHgT" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+Less Disgust:   USE Neutral
+Less Surprise:  USE Neutral

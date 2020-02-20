@@ -41,3 +41,42 @@ h2{
     font-size:15;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+#quit{
+  border-radius:10px;
+  border: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 7%;
+  width: 20%;
+  background-color: #DD304F;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+#done{
+  border-radius:10px;
+  border: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 7%;
+  width: 20%;
+  background-color: #DD304F;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+#start{
+  border-radius:10px;
+  border: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 7%;
+  width: 100%;
+  background-color: #DD304F;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
