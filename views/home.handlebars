@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
+    <link href="css/test.css" rel="stylesheet">
 
     <!-- this is a comment in HTML -->
 
@@ -23,9 +24,11 @@
 
 <body class='body'>
 
-    <div id="homeBox">
-        <span class="dot" onclick='home()'></span>
-        <h1 id="homeHeader">Hi, welcome! <div id="userName"></div></h1>
+    <div id="homeHeader">
+        <div class='dotCorner'><span onclick='home()'></span>
+          <img id="imgLogo" src="css/image.png">
+        </div>
+        <h1>Hi, welcome! <div id="userName"></div></h1>
     </div>
     <script>
         var userName = localStorage.getItem("username");

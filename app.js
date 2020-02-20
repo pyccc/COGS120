@@ -16,6 +16,7 @@ var chooseEmotion = require('./routes/chooseEmotion');
 var settings = require('./routes/settings');
 var home = require('./routes/home');
 var emotionExercise = require("./routes/emotionExercise");
+var Auditory = require("./routes/Auditory");
 
 var app = express();
 
@@ -49,6 +50,7 @@ app.get('/chooseEmotion', chooseEmotion.view);
 app.get('/settings', settings.view);
 app.get('/home', home.view);
 app.get('/emotionExercise', emotionExercise.view);
+app.get('/Auditory',Auditory.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

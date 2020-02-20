@@ -1,4 +1,23 @@
 .container{
+  position: relative;
+}
+.centered-element{
+  height: 400px;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 40%;
+  margin-top:0;
+}
+.timer{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+
+}
+
+.container{
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -74,13 +93,24 @@ p{
 
   div.circle {
     position: absolute;
-    display: inline-block;
+    left: 50%;
+    margin-left: -12%;
     height: 100px;
     width: 100px;
     background-color: white;
     text-align: center;
     border-radius: 50%;
-    margin-top: 100px;
+    margin-top: 130px;
+  }
+  /* Logo on top coreners*/
+  div.dotCorner {
+    height: 80px;
+    width: 80px;
+    margin-top: 5%;
+    margin-left: 70%;
+    background-color:white;
+    border-radius: 50%;
+    display: inline-block;
   }
 
   /* General Button */

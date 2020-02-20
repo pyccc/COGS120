@@ -41,13 +41,14 @@
 
 /* Header for Home Page */
 #homeHeader{
-    position: absolute;
-    margin-top: 5%;
-    text-align:left;
-    left: 10%;
-    font-size: 3rem;
-    color: white;
-    line-height: 1.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background-color: #DD304F;
+  color: white;
+  text-align:center;
 }
 
 .dot {
