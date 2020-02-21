@@ -9,6 +9,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/chooseEmo.css" rel="stylesheet">
+    
     <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -20,9 +21,15 @@
 </head>
 
 <body>
-    <script>
+    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
             var name=localStorage.getItem("option")+localStorage.getItem("emotion");
             console.log(name);
+            var emotion=jQuery.getJSON('data.json');
+            console.log(emotion.emotions);
+            //document.getElementById('emotionImage').src=emotions[name];
     </script>
     <div id="header">
         <span class="dot" onclick="home()"></span>
@@ -33,20 +40,10 @@
             //click to go to home page
             location.href = "home";
         }
-        function option(event) {
-            if ($('#option').is(":checked")) {
-                console.log("User chose more");
-                localStorage.setItem('option', 'more');
-            } else {
-                console.log("User chose less");
-                localStorage.setItem('option', 'less');
-            }
-        }
     </script>
+    {{name}}
+    {{!-- <img id='emotionImage' src={{imageURL}}> --}}
 
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 
 <footer>

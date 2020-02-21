@@ -22,19 +22,6 @@
 <body>
 	<script>
 		localStorage.setItem("option","less");
-
-	</script>
-    <div id="header">
-        <span class="dot" onclick="home()"></span>
-        <h1 align="center">What do you want to feel?</h1>
-        <p>I want to feel
-            <label id="button0" class="switch">
-                <input id="option" class="switch-input" type="checkbox" onclick="option(event)" />
-                <span class="switch-label" data-on="more" data-off="less"></span> <span class="switch-handle"></span>
-            </label>
-        </p>
-    </div>
-    <script>
         function home(){
             //click to go to home page
             location.href="home";
@@ -48,31 +35,21 @@
                 localStorage.setItem('option','less');
             }
         }
-    </script>
-    <!-- <div class="container">
-        <ol>
-			{{#each projects}}
-				<li><a href="#project{{id}}">{{name}}</a></li>
-			{{/each}}
-		</ol>
-
-        <h4>Projects</h4>
-        {{#each projects}}
-			<div class="project" id="{{id}}">
-				<a href="project/{{name}}" class="thumbnail">
-
-					<p>{{name}}</p>
-
-				</a>
-			</div>
-		{{/each}}
-    </div> -->
-    <script>
         function choose(event) {
             console.log("User chose " + event.target.name);
             localStorage.setItem("emotion",event.target.name)
         }
-    </script>
+	</script>
+    <div id="header">
+        <span class="dot" onclick="home()"></span>
+        <h1 align="center">What do you want to feel?</h1>
+        <p>I want to feel
+            <label id="button0" class="switch">
+                <input id="option" class="switch-input" type="checkbox" onclick="option(event)" />
+                <span class="switch-label" data-on="more" data-off="less"></span> <span class="switch-handle"></span>
+            </label>
+        </p>
+    </div>
     <div id='area' align="center" class="circle"
         style="border: none; margin-top:80%; margin-left:27%; margin-right:5%;border-radius: 50%;">
         <button id='button1' name='happy' class="emotions" onclick="choose(event)">Happy</button>
