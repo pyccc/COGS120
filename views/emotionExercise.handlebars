@@ -24,28 +24,12 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        var name = localStorage.getItem("option") + localStorage.getItem("emotion");
-        $('#emotionImage2').hide();
-        $('#emotionImage3').hide();
-        setInterval(function () {
-            $('#emotionImage1').show(1000);
-            $('#emotionImage3').hide();
-            setTimeout(function () {
-                $('#emotionImage1').hide();
-                $('#emotionImage2').show(1000);
-            }, 3000);
-            setTimeout(function () {
-                $('#emotionImage2').hide();
-                $('#emotionImage3').show(1000);
-            }, 6000);
-        }, 9000);
 
-
-    </script>
-    <div id="header">
-        <span class="dot" onclick="home()"></span>
-        <h2 align="center">You are about to do a breathing exercise</h2>
+    <div id="breathingheader">
+        <span class="dot" onclick="home()">
+            <img id='imgLogo' src="/css/image.png">
+        </span>
+        <h2 id="text" align="center">You are about to do a breathing exercise</h2>
     </div>
     <script>
         function home() {
@@ -53,21 +37,67 @@
             location.href = "home";
         }
     </script>
-    <audio autoplay>
-        <source src={{musicURL}}>
-    </audio>
-    <img id='emotionImage1' src={{imageURL1}}>
-    <img id='emotionImage2' src={{imageURL2}}>
-    <img id='emotionImage3' src={{imageURL3}}>
+    {{!-- <iframe src={{musicURL}} width="100" height="20" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> --}}
+    <img id='emotionImage1' class="emoImage" src={{imageURL1}}>
+    <img id='emotionImage2' class="emoImage" src={{imageURL2}}>
+    <img id='emotionImage3' class="emoImage" src={{imageURL3}}>
+    <script type="text/javascript">
+        var time = 4;
+        $('#emotionImage1').hide();
+        $('#emotionImage2').hide();
+        $('#emotionImage3').hide();
+        setTimeout(function () {
+            $('#text').text("Now please breathe along with our pictures and timer.");
+        }, 6000);
+        setInterval(function () {
+            setTimeout(function () {
+
+                $('#emotionImage3').hide();
+                $('#emotionImage1').show(1000);
+                $('#text').html("Please inhale for <span id='time'></span> seconds");
+                counting();
+            }, 0);
+            setTimeout(function () {
+                $('#emotionImage1').hide();
+                $('#emotionImage2').show(1000);
+                $('#text').html("Please hold for <span id='time'></span> seconds");
+                counting();
+            }, 4000);
+            setTimeout(function () {
+                $('#emotionImage2').hide();
+                $('#emotionImage3').show(1000);
+                $('#text').html("Please exhale for <span id='time'></span> seconds");
+                counting();
+            }, 8000);
+        }, 12000);
+
+        function counting() {
+            time = 4;
+            var timer = setInterval(function () {
+                $('#time').text(time);
+                time--;
+            }, 1000);
+            setTimeout(function () {
+                clearInterval(timer);
+            }, 4000);
+        }
+
+
+    </script>
 </body>
 
 <footer>
-    <button id="start" type="button" onclick="start()">Start</button>
-    <script>
-        function start() {
-            location.href = "Breathing";
-        }
-    </script>
+    {{!-- <button id="start" type="button" onclick="start()">Stop</button> --}}
+    <a href="/ChooseExercise">
+        <button id="start" class="button">Switch Exercise</button>
+    </a>
+    <br>
+    <a href="/home">
+        <button id="quit">Quit</button>
+    </a>
+    <a href="/Done">
+        <button id="done">Done</button>
+    </a>
 </footer>
 
 </html>

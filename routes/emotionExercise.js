@@ -1,3 +1,4 @@
+var data = require('../static/data.json');
 
 exports.view = function(req, res){
   

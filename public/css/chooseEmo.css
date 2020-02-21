@@ -8,6 +8,16 @@
     color: white;
 }
 
+#breathingheader{
+  position: absolute;
+    top: 0;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    background-color: #DD304F;
+    color: white;
+}
+
 /* Header for Home Page */
 #homeHeader{
   position: absolute;
@@ -99,9 +109,13 @@ p{
     font-size: 20px;
   }
 
+  #start:hover{
+    opacity: 0.6;
+  }
+
   #quit{
     border-radius:10px;
-    border: none;
+    border: 3px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -115,7 +129,7 @@ p{
 
   #done{
     border-radius:10px;
-    border: none;
+    border: 3px;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -126,7 +140,12 @@ p{
     text-align: center;
     font-size: 15px;
   }
-
+  #imgLogo{
+    max-width: 95%;
+    max-height: 95%;
+    background-image: 'image.png';
+    z-index: -1;
+  }
   #button0{
     float: right;
     margin-right: 35%;
@@ -247,7 +266,11 @@ p{
     margin-left: -11%;
     margin-top: 15%;
     position: absolute;
+    opacity: 0.6;
+    transition: 0.3s;
   }
+
+  .emotions:hover {opacity: 1}
 
   .circle .emotions:nth-child(1) {
     transform: rotate(0deg) translate(120px);
@@ -302,20 +325,22 @@ p{
   text-align: center;
 }
 
+
+.emoImage{
+  width: 350px;
+  height: 350px;  
+  position: absolute;
+  margin-top: 60%;
+  margin-left: 5%;
+}
+
+
 #emotionImage1{
-  width: 10px;
-  height: 10px;  
-  position: relative;
+  border: 3px solid transparent;
 }
 #emotionImage2{
-  width: 20px;
-  height: 20px;  
-  
-  position: relative;
+  border: 10px solid transparent;
 }
 #emotionImage3{
-  width: 30px;
-  height: 30px;  
-  
-  position: relative;
+  border: 30px solid transparent;
 }
