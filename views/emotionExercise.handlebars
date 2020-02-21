@@ -26,10 +26,10 @@
     <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         var name = localStorage.getItem("option") + localStorage.getItem("emotion");
-        console.log(name);
+        $('#emotionImage2').hide();
+        $('#emotionImage3').hide();
         setInterval(function () {
             $('#emotionImage1').show(1000);
-            $('#emotionImage2').hide();
             $('#emotionImage3').hide();
             setTimeout(function () {
                 $('#emotionImage1').hide();
