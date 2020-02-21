@@ -49,7 +49,7 @@ app.get('/Done', Done.view);
 app.get('/chooseEmotion', chooseEmotion.view);
 app.get('/settings', settings.view);
 app.get('/home', home.view);
-app.get('/emotionExercise', emotionExercise.view);
+app.get('/emotionExercise/:type', emotionExercise.view);
 app.get('/Auditory',Auditory.view);
 
 http.createServer(app).listen(app.get('port'), function(){

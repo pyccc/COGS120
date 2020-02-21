@@ -71,7 +71,7 @@
     <script>
         function start() {
             if(localStorage.getItem("option")&&localStorage.getItem("emotion")){
-                location.href="ChooseExercise";
+                location.href="emotionExercise/"+localStorage.getItem("option")+localStorage.getItem("emotion");
             }
             else{
                 alert("Please input an emotion");

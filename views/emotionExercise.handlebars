@@ -9,7 +9,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/chooseEmo.css" rel="stylesheet">
-    
+
     <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,15 +21,27 @@
 </head>
 
 <body>
-    
+
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-            var name=localStorage.getItem("option")+localStorage.getItem("emotion");
-            console.log(name);
-            var emotion=jQuery.getJSON('data.json');
-            console.log(emotion.emotions);
-            //document.getElementById('emotionImage').src=emotions[name];
+        var name = localStorage.getItem("option") + localStorage.getItem("emotion");
+        console.log(name);
+        setInterval(function () {
+            $('#emotionImage1').show(1000);
+            $('#emotionImage2').hide();
+            $('#emotionImage3').hide();
+            setTimeout(function () {
+                $('#emotionImage1').hide();
+                $('#emotionImage2').show(1000);
+            }, 3000);
+            setTimeout(function () {
+                $('#emotionImage2').hide();
+                $('#emotionImage3').show(1000);
+            }, 6000);
+        }, 9000);
+
+
     </script>
     <div id="header">
         <span class="dot" onclick="home()"></span>
@@ -41,16 +53,19 @@
             location.href = "home";
         }
     </script>
-    {{name}}
-    {{!-- <img id='emotionImage' src={{imageURL}}> --}}
-
+    <audio autoplay>
+        <source src={{musicURL}}>
+    </audio>
+    <img id='emotionImage1' src={{imageURL1}}>
+    <img id='emotionImage2' src={{imageURL2}}>
+    <img id='emotionImage3' src={{imageURL3}}>
 </body>
 
 <footer>
     <button id="start" type="button" onclick="start()">Start</button>
     <script>
         function start() {
-            location.href="Breathing";
+            location.href = "Breathing";
         }
     </script>
 </footer>

@@ -301,3 +301,21 @@ p{
   bottom: 0;
   text-align: center;
 }
+
+#emotionImage1{
+  width: 10px;
+  height: 10px;  
+  position: relative;
+}
+#emotionImage2{
+  width: 20px;
+  height: 20px;  
+  
+  position: relative;
+}
+#emotionImage3{
+  width: 30px;
+  height: 30px;  
+  
+  position: relative;
+}
