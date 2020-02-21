@@ -9,6 +9,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/choseEx.css" rel="stylesheet">
+
     <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,7 +27,7 @@
     </script>
     <div id="header">
         <div class="dot" onclick="home()"></div>
-        <h1>What else would you like to do?</h1>
+        <h1>Choose an Exercise</h1>
     </div>
     <script>
         function home() {
@@ -38,15 +39,15 @@
       style="margin-top:60%; margin-left:auto;
       margin-right:auto;text-align:center;" onclick='goToPage()'>
       <div class="container">
-        <a><h2>More Exercises(Coming Soon)</h2>
+        <a href='Breathing'><h2>Breathing</h2></a>
       </div>
     </div>
 
     <div class='card' name='again'
       style="margin-top:8%; margin-left:auto;
-      margin-right:auto;text-align:center;" onclick='goBack()'>
+      margin-right:auto;text-align:center;">
       <div class="container">
-        <h2>Do It Again</h2>
+        <h2>Visual</h2>
       </div>
     </div>
 
@@ -54,10 +55,13 @@
       style="margin-top:8%; margin-left:auto;
       margin-right:auto;text-align:center;" onclick='goHome()'>
       <div class="container">
-        <h2>Start Over</h2>
+        <a href='Auditory'><h2>Auditory</h2></a>
       </div>
     </div>
-
+    <br>
+    <a href="home">
+      <button id="quit">Quit</button>
+    </a>
     <script>
       function goBack() {
         location.href='chooseEmotion';
