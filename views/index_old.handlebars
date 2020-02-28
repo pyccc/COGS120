@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+
+  <head>
+      <title>Login</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+      <link href="css/test.css" rel="stylesheet">
+      <!-- this is a comment in HTML -->
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
+      {{> facebook}}
+      <script src="/js/facebook.js"></script>
+  </head>
+  <body>
+    <script>
+      var email = localStorage.setItem("example@email.com")
+      var password = localStorage.setItem("password")
+      function store() {
+      localStorage.setItem('email', name.value);
+      localStorage.setItem('pw', pw.value);
+      }
+
+      // check if stored data from register-form is equal to entered data in the   login-form
+      function check() {
+
+          // stored data from the register-form
+          var storedName = localStorage.getItem('name');
+          var storedPw = localStorage.getItem('pw');
+
+          // entered data from the login-form
+          var userName = document.getElementById('userName');
+          var userPw = document.getElementById('userPw');
+
+          // check if stored data from register-form is equal to data from login form
+          if(userName.value !== storedName || userPw.value !== storedPw) {
+              alert('ERROR');
+          }else {
+              alert('You are logged in.');
+          }
+      }
+    </script>
+    <div id="homeHeader">
+        <div class="circle">
+          <img id="imgLogo" src="css/image.png">
+        </div>
+    </div>
+    <div id="loginContainer">
+      <br>
+      <br>
+      <div id='login'>
+    <ul>
+        <p style="font-size:100%; margin-left:0;"><label for="usermail">Email</p>
+          <input type="email" name="usermail" placeholder="Email"  id="email">
+        <p style="font-size:100%; margin-left:0;"><label for="password" id="password">Password</p>
+          <input type="password" name="password" placeholder="Password">
+        <p><input type="submit" value="Login" onclick="login()"></p>
+        <script>
+          function login() {
+            //Add the inputed data onto the JSON file for usage later
+            location.href="home"
+          };
+        </script>
+    </ul>
+</form>
+    </div>
+  </body>
+</html>

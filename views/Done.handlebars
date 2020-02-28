@@ -27,7 +27,7 @@
     <script>
       function home() {
         //click to go to home page
-        location.href = "home";
+        location.href = "/";
       }
     </script>
     <h1 align="center">How was it?</h1>
@@ -36,10 +36,10 @@
   <button onclick='breathing()' id="quit">Try Again</button>
   <script>
     function breathing() {
-      location.href = 'emotionExercise/' + localStorage.getItem("option") + localStorage.getItem("emotion");
+      location.href = 'chooseEmotion';
     }
   </script>
-  <a href="home">
+  <a href="/">
     <button id="done">Done</button>
   </a>
 </body>

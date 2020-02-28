@@ -328,7 +328,7 @@ p{
 
 .emoImage{
   width: 350px;
-  height: 350px;  
+  height: 350px;
   position: absolute;
   margin-top: 60%;
   margin-left: 5%;
@@ -336,10 +336,10 @@ p{
 
 
 #emotionImage1{
-  border: 3px solid transparent;
+  border: 30px solid transparent;
 }
 #emotionImage2{
-  border: 10px solid transparent;
+  border: 30px solid transparent;
 }
 #emotionImage3{
   border: 30px solid transparent;

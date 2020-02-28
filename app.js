@@ -14,7 +14,7 @@ var ChooseExercise = require('./routes/ChooseExercise');
 var Done = require('./routes/Done');
 var chooseEmotion = require('./routes/chooseEmotion');
 var settings = require('./routes/settings');
-var home = require('./routes/home');
+//var home = require('./routes/home');
 var emotionExercise = require("./routes/emotionExercise");
 var Auditory = require("./routes/Auditory");
 
@@ -48,7 +48,7 @@ app.get('/ChooseExercise', ChooseExercise.view);
 app.get('/Done', Done.view);
 app.get('/chooseEmotion', chooseEmotion.view);
 app.get('/settings', settings.view);
-app.get('/home', home.view);
+//app.get('/home', home.view);
 app.get('/emotionExercise/:type', emotionExercise.view);
 app.get('/Auditory',Auditory.view);
 
