@@ -2,7 +2,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 40%;
+    height: 30%;
     width: 100%;
     background-color: #DD304F;
     color: white;
@@ -113,6 +113,25 @@ p{
     opacity: 0.6;
   }
 
+  #start1{
+    border-radius:10px;
+    border: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 7%;
+    width: 50%;
+    background-color: #DD304F;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 25%;
+  }
+
+  #start1:hover{
+    opacity: 0.6;
+  }
+
   #quit{
     border-radius:10px;
     border: 3px;
@@ -148,7 +167,7 @@ p{
   }
   #button0{
     float: right;
-    margin-right: 35%;
+    margin-right: 20%;
   }
 
   .switch {
@@ -266,11 +285,11 @@ p{
     margin-left: -11%;
     margin-top: 15%;
     position: absolute;
-    opacity: 0.6;
+    opacity: 1;
     transition: 0.3s;
   }
 
-  .emotions:hover {opacity: 1}
+  .emotions:hover {opacity: 0.5}
 
   .circle .emotions:nth-child(1) {
     transform: rotate(0deg) translate(120px);
@@ -294,6 +313,8 @@ p{
     transform: rotate(306deg) translate(120px);
   }
 
+  
+
   #button1{
       background-color: wheat;
   }
@@ -302,23 +323,57 @@ p{
     background-color: turquoise;
 }
 
+#button2 span {
+  display: inline-block;
+  transform: rotate(-51deg);
+}
+
 #button3{
     background-color: teal;
+}
+
+#button3 span {
+  display: inline-block;
+  transform: rotate(-102deg);
 }
 
 #button4{
     background-color: steelblue;
 }
 
+#button4 span {
+  display: inline-block;
+  transform: rotate(-153deg);
+}
+
 #button5{
     background-color: slategrey;
 }
+
+#button5 span {
+  display: inline-block;
+  transform: rotate(-204deg);
+}
+
 #button6{
     background-color: slateblue;
 }
+
+#button6 span {
+  display: inline-block;
+  transform: rotate(-255deg);
+}
+
+
 #button7{
     background-color: sienna;
 }
+
+#button7 span {
+  display: inline-block;
+  transform: rotate(-306deg);
+}
+
 #buttonQuit{
   position: absolute;
   bottom: 0;

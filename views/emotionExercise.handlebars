@@ -29,7 +29,7 @@
         <span class="dot" onclick="home()">
             <img id='imgLogo' src="/css/image.png">
         </span>
-        <h2 id="text" align="center">You are about to do a breathing exercise</h2>
+        <h2 id="text" align="center">You </h2>
     </div>
     <script>
         function home() {
@@ -43,39 +43,96 @@
     <img id='emotionImage2' class="emoImage" src={{imageURL2}}>
     <img id='emotionImage3' class="emoImage" src={{imageURL3}}>
     <script type="text/javascript">
-        var time = 4;
         $('#emotionImage1').hide();
         $('#emotionImage2').hide();
         $('#emotionImage3').hide();
         setTimeout(function () {
+            $('#text').text("You are ");
+        }, 700);
+        setTimeout(function () {
+            $('#text').text("You are about ");
+        }, 1400);
+        setTimeout(function () {
+            $('#text').text("You are about to do a ");
+        }, 2100);
+        setTimeout(function () {
+            $('#text').text("You are about to do a breathing ");
+        }, 2800);
+        setTimeout(function () {
+            $('#text').text("You are about to do a breathing exercise.");
+        }, 3500);
+        setTimeout(function () {
+            $('#text').text("Now ");
+        }, 4900);
+        setTimeout(function () {
+            $('#text').text("Now please ");
+        }, 5600);
+        setTimeout(function () {
+            $('#text').text("Now please breathe ");
+        }, 6300);
+        setTimeout(function () {
+            $('#text').text("Now please breathe along ");
+        }, 7000);
+        setTimeout(function () {
+            $('#text').text("Now please breathe along with ");
+        }, 7700);
+        setTimeout(function () {
+            $('#text').text("Now please breathe along with our ");
+        }, 8400);
+        setTimeout(function () {
+            $('#text').text("Now please breathe along with our pictures ");
+        }, 9100);
+        setTimeout(function () {
+            $('#text').text("Now please breathe along with our pictures and ");
+        }, 9800);
+        setTimeout(function () {
             $('#text').text("Now please breathe along with our pictures and timer.");
-        }, 6000);
-        setInterval(function () {
+        }, 10500);
+        var exercise = setInterval(function () {
             setTimeout(function () {
 
                 $('#emotionImage3').hide();
-                $('#emotionImage1').show(1000);
                 $('#text').html("Please inhale for <span id='time'></span> seconds");
                 counting();
+                $('#emotionImage1').fadeIn(1000);
             }, 0);
             setTimeout(function () {
                 $('#emotionImage1').hide();
-                $('#emotionImage2').show(1000);
+                $('#emotionImage2').fadeIn(1000);
                 $('#text').html("Please hold for <span id='time'></span> seconds");
                 counting();
             }, 4000);
             setTimeout(function () {
                 $('#emotionImage2').hide();
-                $('#emotionImage3').show(1000);
+                $('#emotionImage3').fadeIn(1000);
                 $('#text').html("Please exhale for <span id='time'></span> seconds");
                 counting();
             }, 8000);
         }, 12000);
 
+        setTimeout(function () {
+            clearInterval(exercise);
+
+            $('#emotionImage1').hide();
+            $('#emotionImage2').hide();
+            $('#emotionImage3').hide();
+        }, 48000);
+
+        setTimeout(function () {
+            $('#text').html("You have complete a breathing exercise!");
+
+        }, 60000);
+
+        setTimeout(function () {
+            window.location.href = '/Done';
+        }, 63000);
+
+
         function counting() {
             time = 4;
             var timer = setInterval(function () {
                 $('#time').text(time);
+                console.log(time);
                 time--;
             }, 1000);
             setTimeout(function () {
@@ -89,18 +146,18 @@
 
 <footer>
 
-  <!--commented out for A/B testing, below is version A page-->
+    <!--commented out for A/B testing, below is version A page-->
     {{!-- <button id="start" type="button" onclick="start()">Stop</button> --}}
     <br>
     <a href="/ChooseExercise">
-        <button id="start" class="button">Switch Exercise</button>
+        <button id="start1" class="button">Switch Exercise</button>
     </a>
     <a href="/Done">
         <button id="done">Done</button>
     </a>
     <!--Version A ends here-->
 
-<!-- Below is version B code-
+    <!-- Below is version B code-
     <br>
     <a href="/ChooseExercise">
         <button id="done">Next</button>
