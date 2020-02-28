@@ -5,12 +5,18 @@
 
 #homeButtonBox{
     position:absolute;
-    margin-right: 15%;
-    margin-left: 7%;
-    top: 50%;
+    top: 75%;
     width: 50%;
     /*background-color:#DD304F;*/
     text-align:center;
+}
+
+#homeButtonBox2{
+  position:absolute;
+  top: 85%;
+  width: 50%;
+  /*background-color:#DD304F;*/
+  text-align:center;
 }
 
 .homeButton{
@@ -22,6 +28,7 @@
     border-radius: 5px;
     position: absolute;
     height: 50px;
+    width: 200px;
   }
 
 .homep{
@@ -45,7 +52,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 40%;
+  height: 70%;
   width: 100%;
   background-color: #DD304F;
   color: white;

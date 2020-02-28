@@ -25,14 +25,16 @@
 <body class='body'>
 
     <div id="homeHeader">
-        <div class='dotCorner'><span onclick='home()'></span>
+        <div><span onclick='home()'></span>
           <img id="imgLogo" src="css/image.png">
         </div>
-        <h1>Hi, welcome! <div id="userName"></div></h1>
+        <h1 style="font-size: 40px;margin-top:50%">Hi, welcome! <div id="userName"></div></h1>
+        <p style="color: white;text-align:center;margin-right:20%">Use our app to give yourself a better mood NOW!</p>
     </div>
     <script>
         var userName = localStorage.getItem("username");
         console.log(localStorage);
+        localStorage.clear();
         document.getElementById('userName').innerHTML = userName;
     </script>
     <script>
@@ -45,6 +47,14 @@
       <a href='chooseEmotion'>
         <button class='homeButton'>
         Shift Your Emotions
+        </button>
+      </a>
+      
+    </div>
+    <div id='homeButtonBox2'>
+      <a href='history'>
+        <button class='homeButton'>
+        User History
         </button>
       </a>
     </div>

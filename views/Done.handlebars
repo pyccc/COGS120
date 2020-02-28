@@ -9,6 +9,8 @@
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/test.css" rel="stylesheet">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- this is a comment in HTML -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,8 +31,31 @@
         //click to go to home page
         location.href = "/";
       }
+
+      function thumbup() {
+        document.getElementById("feedback").innerText="Thank you for your feedback!";
+        console.log("user click up");
+        //record in user history
+        setTimeout(function(){
+          location.href = "/";
+        },3000);
+      }
+
+      function thumbdown() {
+        document.getElementById("feedback").innerText="Thank you for your feedback!";
+        console.log("user click up");
+        //record in user history
+        setTimeout(function(){
+          location.href = "/";
+        },3000);
+      }
     </script>
-    <h1 align="center">How was it?</h1>
+    <h1 id="feedback" align="center">How was it?</h1>
+
+  </div>
+  <div style="position: relative; margin-top:100%; font-size:100px; color:#DD304F">
+    <i class="fa fa-thumbs-up" style="float:left;margin-left:15%" onclick="thumbup()"></i>
+    <i class="fa fa-thumbs-up fa-rotate-180" style="float:right;margin-right:15%;" onclick="thumbdown()"></i>
   </div>
 
   <button onclick='breathing()' id="quit">Try Again</button>
