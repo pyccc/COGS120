@@ -55,11 +55,19 @@
       <h2 onclick='breathing()'>Breathing</h2>
     </div>
   </div>
-  <script>
-    function breathing() {
-      location.href = 'emotionExercise/' + localStorage.getItem("option") + localStorage.getItem("emotion");
-    }
-  </script>
+  {{#if versionB}}
+    <script>
+      function breathing() {
+        location.href = 'emotionExercise_B/' + localStorage.getItem("option") + localStorage.getItem("emotion");
+      }
+    </script>
+  {{else}}
+    <script>
+      function breathing() {
+        location.href = 'emotionExercise/' + localStorage.getItem("option") + localStorage.getItem("emotion");
+      }
+    </script>
+  {{/if}}
   {{!-- <div class='card' name='again'
       style="margin-top:8%; margin-left:auto;
       margin-right:auto;text-align:center;">

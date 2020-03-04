@@ -53,6 +53,7 @@ app.get('/emotionExercise/:type', emotionExercise.view);
 app.get('/Auditory',Auditory.view);
 app.get('/chooseEmotion_B',chooseEmotion.chooseEmotion_B);
 app.get('/emotionExercise_B/:type',emotionExercise.emotionExercise_B);
+app.get('/ChooseExercise_B',ChooseExercise.ChooseExercise_B);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
