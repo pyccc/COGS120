@@ -156,16 +156,27 @@
 </body>
 
 <footer>
-    <!--commented out for A/B testing, below is version A page-->
-    {{!-- <button id="start" type="button" onclick="start()">Stop</button> --}}
-    <br>
-    <!--<a href="/ChooseExercise">
-        <button id="start1" class="button">Switch Exercise</button>
-    </a>-->
+  {{#if versionB}}
+    <a href="/ChooseExercise">
+        <button id="done">Change</button>
+    </a>
+    <a href="/">
+        <button id="quit">Quit</button>
+    </a>
+  {{else}}
     <a href="/Done">
         <button id="done">Done</button>
     </a>
-    Version A ends here-->
+    <a href="/">
+        <button id="quit">Quit</button>
+    </a>
+  {{/if}}
+
+    <!--commented out for A/B testing, below is version A page-->
+    {{!-- <button id="start" type="button" onclick="start()">Stop</button> --}}
+    <!--<a href="/ChooseExercise">
+        <button id="start1" class="button">Switch Exercise</button>
+    </a>-->
 
     <!-- Below is version B code
     <br>
@@ -173,9 +184,6 @@
         <button id="done">Next</button>
     </a>
     Version B ends here-->
-    <a href="/">
-        <button id="quit">Quit</button>
-    </a>
 </footer>
 
 </html>

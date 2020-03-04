@@ -1,11 +1,11 @@
 var data = require('../static/data.json');
 
 exports.view = function(req, res){
-  data['chooseEmotion_B'] = false;
-  res.render('chooseEmotion');
+  data["versionB"] = false;
+  res.render('chooseEmotion',data);
 };
 
 exports.chooseEmotion_B = function(req, res){
-  data['chooseEmotion_B'] = true;
-  res.render('chooseEmotion');
+  data["versionB"] = true;
+  res.render('chooseEmotion',data);
 };

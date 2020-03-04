@@ -8,8 +8,8 @@ exports.view = function(req, res){
       emotion=emo;
     }
   })
-  data['viewAlt'] = false;
-  res.render('emotionExercise',emotion);
+  data['versionB'] = false;
+  res.render('emotionExercise',data);
 };
 
 exports.emotionExercise_B = function(req, res){
@@ -20,6 +20,6 @@ exports.emotionExercise_B = function(req, res){
       emotion=emo;
     }
   })
-  data['viewAlt'] = true;
-  res.render('emotionExercise',emotion);
+  data['versionB'] = true;
+  res.render('emotionExercise',data);
 };

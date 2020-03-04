@@ -80,11 +80,12 @@
 </body>
 
 <footer>
-    <button id="start" type="button" onclick="start()">Start</button>
+  {{#if versionB}}
+    <button id="start" type="button" onclick="startB()">Start</button>
     <script>
-        function start() {
+        function startB() {
             if(localStorage.getItem("option")&&localStorage.getItem("emotion")){
-                location.href="emotionExercise/"+localStorage.getItem("option")+localStorage.getItem("emotion");
+                location.href="emotionExercise_B/"+localStorage.getItem("option")+localStorage.getItem("emotion");
             }
             else{
                 alert("Please input an emotion");
@@ -92,6 +93,19 @@
 
         }
     </script>
+    {{else}}
+      <button id="start" type="button" onclick="start()">Start</button>
+      <script>
+          function start() {
+              if(localStorage.getItem("option")&&localStorage.getItem("emotion")){
+                  location.href="emotionExercise/"+localStorage.getItem("option")+localStorage.getItem("emotion");
+              }
+              else{
+                  alert("Please input an emotion");
+              }
+          }
+      </script>
+    {{/if}}
 </footer>
 
 </html>
