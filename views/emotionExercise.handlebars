@@ -167,6 +167,15 @@
     <a href="/Done">
         <button id="done">Done</button>
     </a>
+    <a href="/ChooseExercise">
+        <button id="switch" onclick="choose()">Switch Exercise</button>
+        <script>
+            function choose() {
+                location.href = "ChooseExercise" + localStorage.getItem("option") 
+                + localStorage.getItem("emotion");
+            }
+        </script>
+    </a>
     <a href="/">
         <button id="quit">Quit</button>
     </a>
