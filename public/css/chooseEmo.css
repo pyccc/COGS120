@@ -159,6 +159,22 @@ p{
     text-align: center;
     font-size: 15px;
   }
+
+  #switch{
+    border-radius:10px;
+    border: 3px;
+    position: fixed;
+    right: 40%;
+    /*left: 30%;*/
+    bottom: 0;
+    height: 7%;
+    width: 20%;
+    background-color: #DD304F;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+  }
+
   #imgLogo{
     max-width: 95%;
     max-height: 95%;
