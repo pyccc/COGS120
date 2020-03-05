@@ -17,6 +17,7 @@ var settings = require('./routes/settings');
 //var home = require('./routes/home');
 var emotionExercise = require("./routes/emotionExercise");
 var Auditory = require("./routes/Auditory");
+var history = require("./routes/history");
 
 var app = express();
 
@@ -54,6 +55,10 @@ app.get('/Auditory',Auditory.view);
 app.get('/chooseEmotion_B',chooseEmotion.chooseEmotion_B);
 app.get('/emotionExercise_B/:type',emotionExercise.emotionExercise_B);
 app.get('/ChooseExercise_B',ChooseExercise.ChooseExercise_B);
+
+app.get('/up',index.view1);
+app.get('/down',index.view2);
+app.get('/history',history.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
