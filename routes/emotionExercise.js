@@ -16,7 +16,7 @@ exports.view = function(req, res){
     "action":"User is doing a breathing exercise_A."
   });
   console.log(history);
-  res.render('emotionExercise',data);
+  res.render('emotionExercise',emotion);
 };
 
 exports.emotionExercise_B = function(req, res){
@@ -33,5 +33,5 @@ exports.emotionExercise_B = function(req, res){
     "action":"User is doing a breathing exercise_B."
   });
   console.log(history);
-  res.render('emotionExercise',data);
+  res.render('emotionExercise',emotion);
 };
