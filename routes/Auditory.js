@@ -19,14 +19,13 @@ exports.projectInfo = function(request, response) {
 exports.view = function(request, response) {
 	//var emotionsID = request.params.id;
 	//var emotion = getProjectData(emotionsID);
-	response.render('Auditory', data);
+  data['versionB'] = false;
+  response.render('Auditory', data);
 };
-function getProjectData() {
-	if (emotionsID == "random") {
-		emotionsID = Math.floor(Math.random() * data.length) + 1;
-	} else {
-		emotionsID = parseInt(emotionsID);
-	}
-  var emotions = data[emotionsID-1]; // of by one, our first project has index 0
-  return emotions;
+exports.auditory_B = function(request, response) {
+	//var emotionsID = request.params.id;
+	//var emotion = getProjectData(emotionsID);
+  data['versionB'] = true;
+  response.render('Auditory', data);
 };
+

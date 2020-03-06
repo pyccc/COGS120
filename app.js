@@ -54,6 +54,7 @@ app.get('/emotionExercise/:type', emotionExercise.view);
 app.get('/Auditory',Auditory.view);
 app.get('/chooseEmotion_B',chooseEmotion.chooseEmotion_B);
 app.get('/emotionExercise_B/:type',emotionExercise.emotionExercise_B);
+app.get('/Auditory_B',Auditory.auditory_B);
 app.get('/ChooseExercise_B',ChooseExercise.ChooseExercise_B);
 
 app.get('/up',index.view1);

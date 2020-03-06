@@ -61,12 +61,28 @@
         location.href = 'emotionExercise_B/' + localStorage.getItem("option") + localStorage.getItem("emotion");
       }
     </script>
+    <div class='card' name='again' style="margin-top:5%; margin-left:auto;
+    margin-right:auto;text-align:center;" onclick='goHome()'>
+    <div class="container">
+      <a href='Auditory_B'>
+        <h2>Auditory</h2>
+      </a>
+    </div>
+    </div>
   {{else}}
     <script>
       function breathing() {
         location.href = 'emotionExercise/' + localStorage.getItem("option") + localStorage.getItem("emotion");
       }
     </script>
+    <div class='card' name='again' style="margin-top:5%; margin-left:auto;
+    margin-right:auto;text-align:center;" onclick='goHome()'>
+    <div class="container">
+      <a href='Auditory'>
+        <h2>Auditory</h2>
+      </a>
+    </div>
+    </div>
   {{/if}}
   {{!-- <div class='card' name='again'
       style="margin-top:8%; margin-left:auto;
@@ -76,14 +92,7 @@
       </div>
     </div> --}}
 
-  <div class='card' name='again' style="margin-top:5%; margin-left:auto;
-      margin-right:auto;text-align:center;" onclick='goHome()'>
-    <div class="container">
-      <a href='Auditory'>
-        <h2>Auditory</h2>
-      </a>
-    </div>
-  </div>
+
   <br>
   <a href="/">
     <button id="quit">Quit</button>
