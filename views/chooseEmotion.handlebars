@@ -9,6 +9,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/chooseEmo.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/aif0sqr.css">
     <!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -55,16 +56,20 @@
         <span class="dot" onclick="home()">
             <img id='imgLogo' src="css/image.png">
         </span>
-        <h1 align="center">What do you want to feel?</h1>
-        <p style="padding: 20px;color:white">I want to feel
-            <label id="button0" class="switch">
+        <h1 align="center">Please choose your</h1>
+        <h1 align="center">desired emotional state</h1>
+        <div id="chooseBar">
+        <p style="color:white">I want to feel</p>
+        <label id="button0" class="switch">
                 <input id="option" class="switch-input" type="checkbox" onclick="option(event)" />
-                <span class="switch-label" data-on="more" data-off="less"></span> <span class="switch-handle"></span>
-            </label>
-        </p>
+                <div class="switch-label" data-on="more" data-off="less"></div> <div class="switch-handle"></div>
+        </label>
+        </div>
     </div>
     <div id='area' align="center" class="circle"
-        style="border: none; margin-top:100%; margin-left:27%; margin-right:5%;border-radius: 50%;">
+        style="border: none; margin-top:100%; margin-left:27%; margin-right:5%;
+        border-radius: 50%;font-family: elido,sans-serif;font-size: 2rem;font-weight: 700;
+        font-style:normal;">
         <button id='button1' name='happy' class="emotions" onclick="choose(event)">Happy</button>
         <button id='button2' name='sad' class="emotions" onclick="choose(event)"><span>Sad</span></button>
         <button id='button3' name='angry' class="emotions" onclick="choose(event)"><span>Angry</span></button>
@@ -77,9 +82,8 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-</body>
 
-<footer>
+
   {{#if versionB}}
     <button id="start" type="button" onclick="startB()">Start</button>
     <script>
@@ -106,6 +110,5 @@
           }
       </script>
     {{/if}}
-</footer>
-
+</body>
 </html>

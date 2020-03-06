@@ -1,80 +1,78 @@
-.body{
-    padding:0;
-    margin:0;
+html {
+  height: 100%;
+  font-family: elido;
 }
 
-#homeButtonBox{
-    position:absolute;
-    top: 75%;
-    width: 50%;
-    /*background-color:#DD304F;*/
-    text-align:center;
+body{
+  height:100%;
+  width:100%;
 }
 
-#homeButtonBox2{
-  position:absolute;
-  top: 85%;
-  width: 50%;
-  /*background-color:#DD304F;*/
+h1{
+  font-family: elido,sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 1rem;
+  margin-block-end: 0em;
+}
+
+p{
+  font-family: elido,sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-block-start: 1em;
+}
+
+#lowerDiv{
   text-align:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.homeButton{
+  .shiftBut{
     border:none;
-    font-size: 15px;
+    font-size: 25px;
+    font-family: elido,sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #DD304F;
     color: white;
-    text-align: center;
-    border-radius: 5px;
-    position: absolute;
-    height: 50px;
+    border-radius: 20px;
+    height: 80px;
     width: 200px;
+    margin-top: 8rem;
   }
 
-.homep{
-    font-size:15px;
-    color:black;
-}
-
-/* Container for Home Page */
-#homeBox{
-    position: absolute;
-    margin-right:auto;
-    margin-left:auto;
-    height: 30%;
-    width: 100%;
+  .histBut{
+    border:none;
+    font-size: 25px;
+    font-family: elido,sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #DD304F;
-    text-align:center;
+    color: white;
+    border-radius: 20px;
+    height: 80px;
+    width: 180px;
+    margin-top: 3rem;
   }
+
 
 /* Header for Home Page */
 #homeHeader{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 70%;
-  width: 100%;
+  height: 40%;
+  width: 100%; 
   background-color: #DD304F;
   color: white;
   text-align:center;
 }
 
-.dot {
-    height: 50px;
-    width: 50px;
-    margin-top: 5%;
-    margin-left: 75%;
-    background-color:white;
-    border-radius: 50%;
-    display: inline-block;
-    color:white;
-}
 
-footer {
-    position: absolute;
-    bottom:0;
-    height:8%;
-    width:100%;
-    background-color:#DD304F;
-    display: inline-block;
+#imgLogo{
+    margin-top: 3rem;
+    width: 80px;
+    height: 80px;
 }

@@ -1,16 +1,17 @@
 <!doctype html>
-<!doctype html>
 
 <html>
 
 <head>
     <title>Home</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+    <!-- Font Style -->
+    <link rel="stylesheet" href="https://use.typekit.net/aif0sqr.css">
     <link href="css/home.css" rel="stylesheet">
-    <link href="css/test.css" rel="stylesheet">
+    <!-- <link href="css/test.css" rel="stylesheet">  -->
 
     <!-- this is a comment in HTML -->
 
@@ -33,14 +34,17 @@
     <!-- End Google Analytics -->
 </head>
 
-<body class='body'>
-
+<body>
     <div id="homeHeader">
         <div><span onclick='home()'></span>
           <img id="imgLogo" src="css/image.png">
         </div>
-        <h1 style="font-size: 40px;margin-top:50%">Hi, welcome! <div id="userName"></div></h1>
-        <p style="color: white;text-align:center;margin-right:20%">Use our app to give yourself a better mood NOW!</p>
+        <div>
+        <h1>Hi, Welcome!</h1>
+        <p style="color: white">
+          Shift your emotions in minutes
+          </p>
+        </div>
     </div>
     <script>
         var userName = localStorage.getItem("username");
@@ -54,21 +58,24 @@
             location.href="/";
         }
     </script>
-    <div id='homeButtonBox'>
-      <a href='chooseEmotion'>
-        <button class='homeButton'>
-        Shift Your Emotions
+    <div id="lowerDiv">
+        <button onclick="redirectEmotion()" class='shiftBut'>
+        Start Shifting!
         </button>
-      </a>
-
-    </div>
-    <div id='homeButtonBox2'>
-      <a href='history'>
-        <button class='homeButton'>
+        <button onclick="redirectEmotion()" class='histBut'>
         User History
         </button>
-      </a>
+      <!-- <a href='history'>
+        <button style="top:80%" class='homeButton'>
+        User History
+        </button>
+      </a> -->
     </div>
+    <script>
+      function redirectEmotion() {
+         location.href='chooseEmotion';
+      }
+    </script>
 </body>
 
   <!-- <footer>
