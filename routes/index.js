@@ -12,7 +12,7 @@ exports.view = function(req, res){
 exports.view1 = function(req, res){
   history.history.push({
     "time":new Date(),
-    "action":"User liked breathing exercise."
+    "action":"User liked exercise."
   });
   res.render('index');
 };
@@ -22,7 +22,7 @@ exports.view1 = function(req, res){
 exports.view2 = function(req, res){
   history.history.push({
     "time":new Date(),
-    "action":"User disliked breathing exercise."
+    "action":"User disliked exercise."
   });
   res.render('index');
 };
